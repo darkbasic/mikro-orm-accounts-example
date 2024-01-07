@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "build",
+    "lib": ["es2022", "dom"],
+    "target": "es2022",
+    "module": "commonjs",
+    "preserveSymlinks": true,                            /* Necessary to support yarn portals with the node-modules linker, used by yarn link (berry) */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "skipLibCheck": true,                                /* Skip type checking all .d.ts files. */
+    "noUncheckedIndexedAccess": true,                    /* Add 'undefined' to a type when accessed using an index. */
+    "declaration": true,                                 /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+                                                         /* Needed for TsMorphMetadataProvider without ts-node. */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src/**/*.ts", "declarations/*.d.ts"],
+  "exclude": ["**/*.test.ts"]
+}

@@ -1,0 +1,43 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+      "standard-with-typescript",
+      "plugin:prettier/recommended"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": [
+          "tsconfig.json",
+          "tsconfig.slonik-code-generator.json",
+          "tests/tsconfig.json"
+        ]
+    },
+    "rules": {
+      "@typescript-eslint/consistent-type-assertions": [
+        "error",
+        {
+          "assertionStyle": "as",
+          "objectLiteralTypeAssertions": "allow-as-parameter"
+        }
+      ],
+      "@typescript-eslint/dot-notation": [
+        "error",
+        {
+          "allowPrivateClassPropertyAccess": true,
+          "allowProtectedClassPropertyAccess": true
+        }
+      ],
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        {
+          "checksVoidReturn": false
+        }
+      ]
+    }
+}
